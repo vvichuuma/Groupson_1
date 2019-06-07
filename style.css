@@ -1,0 +1,63 @@
+
+body{
+  background-color: green;
+}
+
+#outer_border{
+  border:1px solid black;
+}
+
+.box{
+  border:1px solid black;
+  padding: 0.5rem;
+  background-color: white;
+  color:black;
+}
+
+.box:hover{
+  
+  background-color: lightgrey;
+  cursor:pointer;
+}
+
+.active{
+display:block;
+background-color: lightgreen;
+color: black;
+}
+
+.inactive{
+  display: none;
+}
+
+.add_deals:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.align{
+  border:1px solid red;
+  display: inline;
+}
+
+.total_sum{
+  float: right;
+}
+
+#box_1{
+  padding: 0.5rem;
+}
+
+.price{
+  color: black;
+  float: right;
+  margin-top: -2.0rem;
+  padding: 0;
+
+}
+
+.add_deals{
+  width: 8%;
+  color:blue;
+  font-size: 1rem;
+}
