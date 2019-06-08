@@ -39,7 +39,9 @@ function outerBound(){
   categories.forEach(category => {
       $root.innerHTML += `   <div onclick="showFunction(this)" class="box">
 
-      <h3>${category.name} <span class="total_sum">Total : <span id="total_sumz">${category.sum_tot}</span>  </span></h3>
+     
+      <h3>${category.name} <span class="total_sum">Total : <span id="total_sumz-${category.id}">${category.sum_tot}</span>  </span></h3>
+
 
      </div>
         
@@ -74,13 +76,12 @@ function showFunction(el){
 
    var total_sum = categories.find(category => category.id === id).sum_tot + rand_num;
 
-    categories.find(category => category.id === id).sum_tot
-      =  categories.find(category => category.id === id).sum_tot + total_sum;
-  
+   categories.find(category => category.id === id).sum_tot = total_sum;
+
+  document.getElementById(`total_sumz-${id}`).innerHTML = total_sum
+
   el.previousElementSibling.innerHTML += `<h4>Deal ${dealz} </h4>` + `<span class="price">$${rand_num}</span>`
 
   
-
-
 }
 
